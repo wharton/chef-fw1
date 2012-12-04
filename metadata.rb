@@ -9,7 +9,7 @@ version          "0.1.0"
   supports os
 end
 
-depends "coldfusion10"
+depends "coldfusion902"
 
-recipe "default", "installs fw1 2.0.1 adds mapping."
+recipe "default", "installs fw1 2.0.1 and adds a ColdFusion mapping."
 

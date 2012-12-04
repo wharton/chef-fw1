@@ -76,8 +76,8 @@ execute "start_cf_for_fw1_default_cf_config" do
   command "/bin/true"
   notifies :start, "service[coldfusion]", :immediately
 end
- 
-coldfusion10_config "extensions" do
+
+coldfusion902_config "extensions" do
   action :set
   property "mapping"
   args ({ "mapName" => "#{node['fw1']['logical_path']}",
