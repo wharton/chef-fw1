@@ -49,8 +49,8 @@ end
 # Create the target install directory if it doesn't exist
  
 directory "#{node['fw1']['install_path']}/org/corfield" do
-  owner "vagrant"
-  group "vagrant"
+  owner "root"
+  group "root"
   mode "0755"
   action :create
   recursive true
