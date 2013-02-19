@@ -15,6 +15,8 @@ Attributes
 ==========
 
 * `node['fw1']['install_path']` (Default is "/vagrant/frameworks")
+* `node['fw1']['owner']` (Default is `nil` which will result in owner being set to `node['cf10']['installer']['runtimeuser']`)
+* `node['fw1']['group']` (Default is "bin")
 * `node['fw1']['logical_path']` (Default is "/org")
 * `node['fw1']['fw1_version']` (Default is '2')
 * `node['fw1']['2']['download']['url']` (Default is "https://github.com/seancorfield/fw1/archive/2.0.1.zip")
