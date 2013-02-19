@@ -35,7 +35,7 @@ end
  
 file_name = zip_url.split('/').last
 
-node.set['fw1']['owner'] = node['cf10']['installer']['runtimeuser'] if node['fw1']['owner'] == nil
+node.set['fw1']['owner'] = "nobody" if node['fw1']['owner'] == nil
  
 # Download FW1
  
