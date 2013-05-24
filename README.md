@@ -14,13 +14,13 @@ coldfusion10
 Attributes
 ==========
 
-* `node['fw1']['install_path']` (Default is "/vagrant/frameworks")
-* `node['fw1']['owner']` (Default is `nil` which will result in owner being set to `node['cf10']['installer']['runtimeuser']`)
-* `node['fw1']['group']` (Default is "bin")
-* `node['fw1']['logical_path']` (Default is "/org")
-* `node['fw1']['fw1_version']` (Default is '2')
-* `node['fw1']['2']['download']['url']` (Default is "https://github.com/seancorfield/fw1/archive/2.0.1.zip")
-* `node['fw1']['1']['download']['url']` (Default is "https://github.com/seancorfield/fw1/archive/v1.2.2.zip")
+* `node['fw1']['install_path']` - The root directory to install FW/1 versions. Each version will have a sub directory under this directory. (Default is "/vagrant/frameworks/fw1")
+* `node['fw1']['owner']` - The owner of the `install_path`. (Default is `nil` which will result in owner being set to `node['cf10']['installer']['runtimeuser']`)
+* `node['fw1']['group']` - The group of the `install_path`. (Default is "bin")
+* `node['fw1']['logical_paths']` - Array of mappings to be applied for each version of FW/1. There should be one key for each `fw1_versions` key.  (Default is ["/org"])
+* `node['fw1']['fw1_versions']` - Array of framework versions to install. Each key should match a tag name in the [fw1 repository]( https://github.com/framework-one/fw1). (Default is ["v2.1.1"])
+* `node['fw1']['download_url_base']` - The base URL for version downloads. (Default is "https://github.com/framework-one/fw1/archive")
+
 
 Usage
 =====
